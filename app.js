@@ -17,7 +17,7 @@ app.set('view engine', 'ejs');
 
 /* Banco de dados */ 
 
-mongoose.connect("mongodb+srv://admin-geraldo:Miranha13@cluster0.wi4jp2h.mongodb.net/todolistBD", {useNewUrlParser: true});
+
 
 const itensSchema = new mongoose.Schema({
     name: String
