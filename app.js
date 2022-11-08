@@ -17,7 +17,8 @@ app.set('view engine', 'ejs');
 
 /* Banco de dados */ 
 
-
+//Aqui fica a conexão com o banco de dados
+//mongoose.connect("mongodb+srv://<administrador><senha>@cluster0.wi4jp2h.mongodb.net/todolistBD", {useNewUrlParser: true});
 
 const itensSchema = new mongoose.Schema({
     name: String
