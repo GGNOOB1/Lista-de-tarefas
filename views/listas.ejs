@@ -1,0 +1,38 @@
+<%- include("header.ejs") -%>
+
+    <div class="listasContainers">
+        <div class="container-alinhamentos-listas">
+            <div class="div-listas-item">
+                <ul class="listaNordenada-Listas">
+                    <h1>Listas atuais: </h1>
+                    <% nomesListas.forEach(nomes=> { %>
+
+                        <a class="listas-item-link" href="/listas/<%=nomes%>">
+                            <li class="listas-item">
+
+                                <span class="span-listas">
+                                    <%=nomes%>
+
+                                </span>
+
+                            </li>
+                        </a>
+
+                        <%})%>
+                </ul>
+            </div>
+            <div class="div-listas-criarItem">
+                <h1>Criar lista: </h1>
+                <img src="/img/criarLista.png"> 
+                <form action="/CriarLista" method="post">
+                    <label for="">Insira o nome da lista que você deseja criar: </label><br>
+                    <div class="inputCriarLista">
+                        <input id="inputCriarLista" type="text" name="criarLista" placeholder="Exemplo: Amanhã" required autocomplete="off">
+                        </div>
+                    <button class="criar" type="submit" >Criar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <%- include("footer.ejs") -%>
